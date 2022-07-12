@@ -96,19 +96,20 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ADF1_Init();
-  MX_I2C1_Init();
-  MX_I2C2_Init();
-  MX_OCTOSPI1_Init();
-  MX_OCTOSPI2_Init();
-  MX_SPI2_Init();
-  MX_UART4_Init();
-  MX_USART1_UART_Init();
-  MX_UCPD1_Init();
-  MX_USB_OTG_FS_PCD_Init();
+//  MX_ADF1_Init();
+//  MX_I2C1_Init();
+//  MX_I2C2_Init();
+//  MX_OCTOSPI1_Init();
+//  MX_OCTOSPI2_Init();
+//  MX_SPI2_Init();
+//  MX_UART4_Init();
+//  MX_USART1_UART_Init();
+//  MX_UCPD1_Init();
+//  MX_USB_OTG_FS_PCD_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-
+  // enable TIM6 Interrupt which will be used as systick
+  HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
 
   /* Infinite loop */
